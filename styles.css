@@ -2,16 +2,6 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    animation: fadeIn 2s ease-in;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .container {
@@ -59,7 +49,7 @@ nav ul li a:hover {
 }
 
 .parallax {
-    background-image: url('https://via.placeholder.com/1200x500');
+    background-image: url('https://via.placeholder.com/1200x1000');
     height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -84,24 +74,38 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
-.services {
+.about, .services, .partners {
     background-color: #f4f4f4;
     padding: 50px 0;
 }
 
 .service-list {
-    display: flex;
-    justify-content: space-around;
-    animation: fadeIn 1.5s ease-in;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .service-item {
     background-color: white;
     padding: 20px;
-    width: 30%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+}
+
+.service-item h4 {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.service-item p {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .service-item:hover {
@@ -109,21 +113,25 @@ nav ul li a:hover {
 }
 
 .portfolio {
-    background-color: #fff;
     padding: 50px 0;
-    text-align: center;
+    background-color: #fff;
 }
 
 .portfolio-list {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
+.portfolio-list img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .contact {
-    background-color: #f4f4f4;
     padding: 50px 0;
-    text-align: center;
+    background-color: #f4f4f4;
 }
 
 footer {
@@ -131,16 +139,8 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    animation: fadeInUp 2s ease-out;
 }
 
-@keyframes fadeInUp {
-    from {
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+footer p {
+    margin: 0;
 }
