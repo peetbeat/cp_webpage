@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Építőipari Vállalat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Építőipari Vállalat</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Kezdőlap</a></li>
+                <li><a href="#services">Szolgáltatások</a></li>
+                <li><a href="#portfolio">Portfólió</a></li>
+                <li><a href="#contact">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="hero" class="hero parallax">
+    <div class="container">
+        <h2>Professzionális építkezési szolgáltatások</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula purus ut mi pharetra.</p>
+    </div>
+</section>
+
+<section id="services" class="services">
+    <div class="container">
+        <h3>Szolgáltatásaink</h3>
+        <div class="service-list">
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300" alt="Építkezési projekt">
+                <h4>Építkezési projektek</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum nunc ut massa dignissim lacinia.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300" alt="Karbantartás">
+                <h4>Karbantartás</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac venenatis erat, nec ultricies mi.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/300" alt="Tanácsadás">
+                <h4>Tanácsadás</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor dui in est euismod tempus.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <h3>Portfólió</h3>
+        <div class="portfolio-list">
+            <img src="https://via.placeholder.com/400x300" alt="Portfólió kép 1">
+            <img src="https://via.placeholder.com/400x300" alt="Portfólió kép 2">
+            <img src="https://via.placeholder.com/400x300" alt="Portfólió kép 3">
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h3>Kapcsolat</h3>
+        <p>Elérhetőségek: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Email: info@epitoipari-vallalat.hu</p>
+        <p>Telefon: +36 30 123 4567</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Építőipari Vállalat. Minden jog fenntartva.</p>
+    </div>
+</footer>
+
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
