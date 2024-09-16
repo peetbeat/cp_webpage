@@ -41,6 +41,7 @@
     <div class="container">
         <h3>Szolgáltatásaink</h3>
         <div class="service-list">
+            <!-- 9 szolgáltatás mező -->
             <div class="service-item">
                 <img src="https://via.placeholder.com/400x300" alt="Szolgáltatás 1">
                 <h4>Szolgáltatás 1</h4>
@@ -100,10 +101,53 @@
 <section id="portfolio" class="portfolio">
     <div class="container">
         <h3>Portfólió</h3>
-        <div class="portfolio-list">
-            <img src="https://via.placeholder.com/400x300" alt="Portfólió kép 1">
-            <img src="https://via.placeholder.com/400x300" alt="Portfólió kép 2">
-            <img src="https://via.placeholder.com/400x300" alt="Portfólió kép 3">
+        <div class="service-list">
+            <!-- 9 portfólió elem -->
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 1">
+                <h4>Portfólió 1</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 2">
+                <h4>Portfólió 2</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 3">
+                <h4>Portfólió 3</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 4">
+                <h4>Portfólió 4</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 5">
+                <h4>Portfólió 5</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 6">
+                <h4>Portfólió 6</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 7">
+                <h4>Portfólió 7</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 8">
+                <h4>Portfólió 8</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <img src="https://via.placeholder.com/400x300" alt="Portfólió 9">
+                <h4>Portfólió 9</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -124,10 +168,15 @@
 </footer>
 
 <script>
+    // Smooth scroll animáció
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            const offsetTop = targetElement.offsetTop - 60;
+            window.scrollTo({
+                top: offsetTop,
                 behavior: 'smooth'
             });
         });
